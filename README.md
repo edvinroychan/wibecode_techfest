@@ -1,0 +1,1 @@
+# SafeRoute — VibeCode Winning UI\nOpen index.html in a modern browser.\n\nDesigned as a visual-first hackathon prototype.

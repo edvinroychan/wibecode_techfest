@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SafeRoute — Move without fear.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div><div class="cursor-glow"></div>
+<header class="nav">
+  <div class="logo"><span class="logo-dot"></span> SAFEROUTE</div>
+  <div class="nav-links"><a href="#experience">Experience</a><a href="#signals">Safety signals</a><a href="#report">Report</a></div>
+  <button class="nav-btn" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">Explore <b>↗</b></button>
+</header>
+
+<main>
+<section class="hero" id="experience">
+  <div class="hero-copy">
+    <div class="eyebrow"><i></i> COMMUNITY SAFETY / LIVE NETWORK</div>
+    <h1>Move through<br><em>the city</em> with confidence.</h1>
+    <p>SafeRoute turns community signals into safer travel decisions — before you take the first step.</p>
+    <div class="hero-actions"><button class="cta" onclick="scrollToPlanner()">Plan a safer route <span>→</span></button><button class="play" onclick="showStory()">● <span>How it works</span></button></div>
+    <div class="trust"><span><b>12.4K</b> verified signals</span><span><b>94%</b> reviewed</span><span><b>24/7</b> community</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="orb"></div><div class="ring r1"></div><div class="ring r2"></div>
+    <div class="floating-card fc-top"><span class="pulse"></span><div><small>NETWORK STATUS</small><strong>All systems active</strong></div><b>LIVE</b></div>
+    <div class="city-map">
+      <div class="grid"></div>
+      <div class="road a"></div><div class="road b"></div><div class="road c"></div><div class="road d"></div><div class="road e"></div>
+      <div class="route-glow"></div><div class="route-core"></div>
+      <div class="pin p1 safe">✓</div><div class="pin p2 warn">!</div><div class="pin p3 safe">✓</div><div class="pin p4 warn">!</div>
+      <div class="destination"><span></span> YOUR DESTINATION</div>
+      <div class="map-ui"><span>SAFETY LAYER</span><b>● ON</b></div>
+    </div>
+    <div class="floating-card fc-bottom"><div class="score-ring"><strong id="score">92</strong><small>/100</small></div><div><small>ROUTE SAFETY</small><strong>Low risk</strong><span>+18% safer than fastest route</span></div></div>
+  </div>
+</section>
+
+<section class="ticker"><div>✦ SAFER STREETS START WITH BETTER INFORMATION</div><div>✦ 2,847 PEOPLE REACHED THIS WEEK</div><div>✦ COMMUNITY POWERED</div><div>✦ SAFER STREETS START WITH BETTER INFORMATION</div></section>
+
+<section class="planner" id="planner">
+ <div class="section-label">01 / SMART ROUTING</div>
+ <div class="section-title"><h2>Don't just find a route.<br><span>Find a safer one.</span></h2><p>Compare routes using community reports, lighting indicators and recent safety signals.</p></div>
+ <div class="planner-card">
+   <div class="search-side">
+    <div class="field"><label>FROM</label><div><span>⌖</span><input id="from" value="City Centre"></div></div>
+    <div class="swap">⇅</div>
+    <div class="field"><label>TO</label><div><span>◎</span><input id="to" value="Central Library"></div></div>
+    <button class="route-btn" onclick="calculate()">Calculate safest route <span>↗</span></button>
+    <div class="route-options">
+      <div class="option selected"><div class="opt-icon">✦</div><div><b>Safest</b><small>2.4 km · 18 min</small></div><strong>92</strong></div>
+      <div class="option"><div class="opt-icon grey">→</div><div><b>Balanced</b><small>2.1 km · 14 min</small></div><strong>78</strong></div>
+      <div class="option"><div class="opt-icon grey">⚡</div><div><b>Fastest</b><small>1.8 km · 11 min</small></div><strong>61</strong></div>
+    </div>
+   </div>
+   <div class="big-map"><div class="map-grid"></div><div class="map-road x1"></div><div class="map-road x2"></div><div class="map-road x3"></div><div class="map-road x4"></div><div class="map-road x5"></div>
+    <div class="big-route"></div><div class="big-pin bp1">A</div><div class="big-pin bp2">B</div>
+    <div class="map-callout"><span>AI SAFETY ANALYSIS</span><b>LOW RISK</b><small>Based on 184 recent community signals</small></div>
+    <div class="map-zoom">+<hr>−</div>
+   </div>
+ </div>
+</section>
+
+<section class="signals" id="signals">
+ <div class="section-label">02 / SAFETY INTELLIGENCE</div>
+ <div class="signal-head"><h2>See what the<br><span>community sees.</span></h2><p>Every signal adds context. Together, they create a living safety layer for the city.</p></div>
+ <div class="signal-grid">
+  <div class="glass large"><div class="card-top"><span>LIVE SIGNALS</span><b>● NOW</b></div><div class="big-num">1,284</div><p>people contributing to the safety network right now.</p><div class="mini-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+  <div class="glass"><div class="icon">◌</div><b>Verified safer areas</b><strong class="counter">327</strong><small>+12 this week</small></div>
+  <div class="glass"><div class="icon red">!</div><b>Signals detected</b><strong class="counter">46</strong><small>reviewed today</small></div>
+  <div class="glass highlight"><div class="radar"><span></span><span></span><span></span></div><b>AI RISK ENGINE</b><strong>ACTIVE</strong><small>Analyzing route conditions in real time.</small></div>
+ </div>
+</section>
+
+<section class="report-section" id="report">
+ <div class="report-copy"><div class="section-label">03 / GIVE BACK</div><h2>One report.<br><span>Hundreds informed.</span></h2><p>Notice something others should know? Share it anonymously. Your observation becomes part of the safety layer.</p></div>
+ <div class="report-card">
+  <div class="report-head"><span>NEW COMMUNITY SIGNAL</span><div>ANONYMOUS <i></i></div></div>
+  <label>LOCATION<input id="loc" placeholder="Where did you notice it?"></label>
+  <label>WHAT HAPPENED<select id="kind"><option>Broken streetlight</option><option>Unsafe area</option><option>Suspicious activity</option><option>Road hazard</option></select></label>
+  <label>DETAILS<textarea id="details" placeholder="Add useful context..."></textarea></label>
+  <button class="submit" onclick="submitSignal()">Publish safety signal <span>→</span></button>
+  <div class="success" id="success">✓ SIGNAL PUBLISHED — THANK YOU FOR MAKING THE CITY SAFER.</div>
+ </div>
+</section>
+
+<footer><div class="logo"><span class="logo-dot"></span> SAFEROUTE</div><p>Technology for safer communities.</p><span>VIBECODE 2026 · BUILD BEYOND BOUNDARIES</span></footer>
+</main>
+<div class="modal" id="modal"><div><button onclick="closeStory()">×</button><div class="modal-icon">✦</div><h2>Information<br>creates confidence.</h2><p>SafeRoute combines community observations into a simple safety layer. It doesn't promise perfect safety — it helps people make better-informed choices.</p><b>PROBLEM → SIGNALS → INSIGHT → ACTION</b></div></div>
+<script src="script.js"></script>
+</body></html>
